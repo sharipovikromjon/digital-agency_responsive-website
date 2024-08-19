@@ -1,0 +1,112 @@
+.home-intro {
+  background-color: $white;
+  padding-top: 108px;
+  padding-bottom: 108px;
+  // background-image: url("../../../images/home/home-intro-bg-img-mobile.svg");
+  // background-repeat: no-repeat;
+  // background-position: 100% 100%;
+  &__list {
+    align-items: center;
+    justify-content: center;
+    column-gap: 35px;
+  }
+  &__img-item {
+    display: none;
+  }
+  &__content-item {
+    text-align: left;
+    &--caption {
+      color: #e87d0e;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 31px;
+    }
+    &--title {
+      color: $black;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 53px;
+      margin-bottom: 28px;
+      max-width: 384.8px;
+    }
+    &--text {
+      color: $black;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 28px;
+      margin-bottom: 35px;
+      max-width: 465px;
+    }
+    &--button {
+      padding: 13px 23px;
+      border-radius: 40px;
+      background: linear-gradient(92deg, #fa8305 2.08%, #fb9e3c 117.25%);
+      color: $white;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      border: none;
+      transition: all 0.4s ease;
+    }
+    &--button:hover {
+      opacity: 0.7;
+    }
+  }
+}
+// media
+// tablet
+@media screen and (min-width: 900px) {
+  .home-intro {
+    &__list {
+      display: flex;
+    }
+    &__content-item {
+      &--text {
+        max-width: 300px;
+      }
+    }
+    &__img-item {
+      display: block;
+    }
+  }
+}
+// desktop
+@media screen and (min-width: 1440px) {
+  .home-intro {
+    background-image: url("../../../images/home/home-intro-bg-img.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    padding-top: 102px;
+    padding-bottom: 106px;
+    &__content-item {
+      &--caption {
+        color: #e87d0e;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 31px;
+        margin-bottom: 17px;
+      }
+      &--title {
+        color: $black;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 77px;
+        margin-bottom: 26px;
+      }
+      &--text {
+        color: $black;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 50px;
+      }
+      &--button {
+        padding: 15px 30px;
+        color: $white;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
