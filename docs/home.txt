@@ -1,0 +1,9 @@
+header
+intro
+about
+services
+news
+projects
+team
+subscribe
+footer
