@@ -2,15 +2,113 @@
   padding-top: 48px;
   padding-bottom: 106px;
   background-color: $white;
+  &__container {
+    text-align: center;
+  }
   &__title-block {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     &--title {
       color: #222;
-text-align: center;
-font-size: 16px;
-font-weight: 600;
-line-height: 30px;
-margin-bottom: 72px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      margin-bottom: 72px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &__img-block {
+    border-radius: 5px;
+    margin-bottom: 95px;
+  }
+  &__content-block {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    &--title {
+      color: #222;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 37.5px;
+      margin-bottom: 18px;
+    }
+    &--text {
+      color: #525252;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22.5px;
+    }
+  }
+}
+// media
+// tablet
+@media screen and (min-width: 768px) {
+  .home-about {
+    &__list {
+      flex-direction: column;
+      text-align: left;
+      margin-left: 0;
+    }
+    &__title-block {
+      margin-bottom: 30px;
+      max-width: 648px;
+      &--title {
+        font-size: 25px;
+      }
+    }
+    &__content-block {
+      margin-bottom: 50px;
+      text-align: left;
+      width: 100%;
+
+      // margin-right: 0;
+      margin-left: 0;
+      max-width: 545px;
+      &--title {
+        font-size: 22px;
+        line-height: 32px;
+      }
+      &--text {
+        font-size: 16px;
+      }
+    }
+    &__img-block {
+      margin-bottom: 0px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .home-about {
+    &__title-block {
+      margin-bottom: 50px;
+    }
+    &__list {
+      position: relative;
+      &::after {
+        content: "";
+        padding: 100px;
+        position: absolute;
+        background-image: url("../../../images/home/home-about-style-img.svg");
+        background-repeat: no-repeat;
+        top: 25.5%;
+        right: 18%;
+      }
+    }
+    &__content-block {
+      &--title {
+        margin-bottom: 32px;
+        font-size: 30px;
+      }
+    }
+    &__img-block--img {
+      position: relative;
+      z-index: 5;
     }
   }
 }
